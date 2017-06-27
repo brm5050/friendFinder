@@ -1,0 +1,22 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brm5050/friendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brm5050/friendFinder/issues"
+  },
+  "homepage": "https://github.com/brm5050/friendFinder#readme",
+  "dependencies": {
+    "file-system": "^2.2.2"
+  }
+}
