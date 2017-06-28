@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head> 
+	<title>Friend Finder</title>
+
+  <!-- Added link to the jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+<!-- Added a link to Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+
+	<h1>Dating Survey</h1>
+	<hr>
+	<h2>About You</h2>
+	<h3>Name (required)</h3>
+	<input type="text" name id= "name">
+	<h3>Link to Photo Image (Required)</h3>
+	<input type="text" name id= "user-photo">
+	<hr>
+
+	<container>
+
+	<h2>Question 1</h2>
+	<h3>You are often the most outgoing person in a group of people</h3>
+	<div class="btn-group">
+
+	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+	</div>
+
+	<h2>Question 2</h2>
+	<h3>You see your life being dedicated to having children</h3>
+	<div class="btn-group">
+
+	 	<select data-placeholder="" class="chosen-select" id="q2">
+	 		<option value=""></option>
+	        <option value="1">1 (Strongly Disagree)</option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+	        <option value="4">4</option>
+	        <option value="5">5 (Strongly Agree)</option>
+	  	</select>
+	</div>
+
+	<h2>Question 3</h2>
+	<h3>You think that work is one of the most important things in your life</h3>
+	<div class="btn-group">
+
+	 	<select data-placeholder="" class="chosen-select" id="q3">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+	</div>
+
+	<h2>Question 4</h2>
+	<h3>You are often told that you are attractive</h3>
+	<div class="btn-group">
+
+	 	<select data-placeholder="" class="chosen-select" id="q4">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+	</div>
+
+	<h2>Question 5</h2>
+	<h3>You are healthy</h3>
+	<div class="btn-group">
+
+	 	<select data-placeholder="" class="chosen-select" id="q5">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+	</div>
+	<hr>
+	<p><a class="btn btn-primary btn-lg" id="submit" href="#" role="button">Submit</a></p>
+	
+	<hr>
+
+	</container>
+
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+
+$("#submit").on("click", function(event){
+	event.preventDefault();
+
+	var person = {
+		name: $("#name").val().trim(),
+		photo: $("#user-photo").val().trim(),
+
+		answers: 
+			$("#q5").chosen()
+		};
+console.log(person);
+
+	
+});
+
+</script>
